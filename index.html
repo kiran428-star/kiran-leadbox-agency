@@ -104,14 +104,17 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        padding: 12px 24px;
+        gap: 8px;
+        height: 46px;
+        padding: 0 16px;
         border-radius: 12px;
         font-weight: 800;
         font-size: 13px;
+        white-space: nowrap;
         cursor: pointer;
         transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
         border: 1px solid transparent;
+        text-align: center;
       }
       .btn:hover { transform: translateY(-3px); }
       .btn-primary {
@@ -247,53 +250,6 @@
       }
       .section-title { font-size: clamp(30px, 3.8vw, 44px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.16; margin-bottom: 14px; }
       .section-desc { font-size: 16px; color: var(--text-sub); }
-
-      /* OPS PIPELINE: RELEASES, DEPLOYMENTS & PACKAGES */
-      .ops-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-      }
-      .ops-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border-glass);
-        border-radius: var(--radius-lg);
-        padding: 28px 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: all 0.3s ease;
-      }
-      .ops-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--teal-vibrant);
-        background: var(--bg-card-hover);
-        box-shadow: 0 16px 36px rgba(0, 71, 171, 0.35);
-      }
-      .ops-head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 18px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid var(--border-subtle);
-      }
-      .ops-badge {
-        font-size: 10px;
-        font-weight: 800;
-        padding: 3px 8px;
-        border-radius: 4px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-      }
-      .badge-teal { background: rgba(2, 195, 154, 0.15); color: var(--teal-vibrant); }
-      .badge-blue { background: rgba(0, 71, 171, 0.25); color: #70A9FF; }
-      .badge-purple { background: rgba(168, 85, 247, 0.18); color: #C084FC; }
-
-      .ops-list { list-style: none; display: grid; gap: 12px; font-size: 13px; color: var(--text-sub); margin-bottom: 20px; }
-      .ops-list li { display: flex; flex-direction: column; gap: 2px; }
-      .ops-list strong { color: #FFF; font-size: 13px; }
-      .ops-list span { font-size: 11px; color: var(--text-muted); }
 
       /* PRICING SYSTEM */
       .pricing-grid {
@@ -442,17 +398,19 @@
       .day-btn .d-name { font-size: 10px; text-transform: uppercase; margin-bottom: 2px; }
       .day-btn .d-num { font-size: 15px; font-weight: 800; }
 
+      /* Precise 3x2 / 6-Slot Grid */
       .slots-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
       .slot-btn {
         background: rgba(255,255,255,0.04);
         border: 1px solid var(--border-subtle);
         border-radius: 7px;
-        padding: 8px;
+        padding: 8px 4px;
         text-align: center;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 700;
         cursor: pointer;
         transition: all 0.2s ease;
+        white-space: nowrap;
       }
       .slot-btn:hover, .slot-btn.active {
         background: var(--royal-blue);
@@ -521,11 +479,11 @@
       @media (max-width: 1100px) {
         .pricing-grid { grid-template-columns: repeat(3, 1fr); }
         .services-grid { grid-template-columns: repeat(2, 1fr); }
-        .ops-grid { grid-template-columns: 1fr; }
       }
       @media (max-width: 860px) {
         .pricing-grid { grid-template-columns: 1fr 1fr; }
         .hero-grid, .booking-grid { grid-template-columns: 1fr; }
+        .slots-strip { grid-template-columns: repeat(3, 1fr); }
         .nav-links { display: none; }
       }
       @media (max-width: 580px) {
@@ -562,7 +520,6 @@
           <a href="#why-choose">Why Us</a>
           <a href="#pricing">Pricing</a>
           <a href="#services">8 Services</a>
-          <a href="#ops-ecosystem">Ecosystem</a>
           <a href="#appointment">Schedule Call</a>
           <a href="#audit">Free Audit</a>
         </div>
@@ -632,94 +589,6 @@
         </div>
       </section>
 
-      <!-- RELEASES, DEPLOYMENTS & PACKAGES (TECHNICAL ECOSYSTEM) -->
-      <section class="section" id="ops-ecosystem" style="background:var(--bg-surface); border-top:1px solid var(--border-glass); border-bottom:1px solid var(--border-glass);">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-tag">System Operations</span>
-            <h2 class="section-title">Releases, Deployments & Packages</h2>
-            <p class="section-desc">Production release notes, cloud delivery points, and modular tech packages powering the Kiran LeadBox engine.</p>
-          </div>
-
-          <div class="ops-grid">
-            <!-- 1. RELEASES -->
-            <div class="ops-card">
-              <div>
-                <div class="ops-head">
-                  <span class="mono" style="font-weight:800; font-size:15px; color:#FFF;">🏷️ Releases</span>
-                  <span class="ops-badge badge-teal">v2.4 Production</span>
-                </div>
-                <ul class="ops-list">
-                  <li>
-                    <strong>v2.4.0 — WhatsApp Qualification Engine</strong>
-                    <span>Integrated pre-qualification questions & direct mobile routing.</span>
-                  </li>
-                  <li>
-                    <strong>v2.3.2 — Google Sheets Webhook Receiver</strong>
-                    <span>Real-time lead capture using zero-cost Google Apps Script engine.</span>
-                  </li>
-                  <li>
-                    <strong>v2.1.0 — Hyderabad Geo-Crawl Matrix</strong>
-                    <span>Hyper-local pin-code targeting & lead density scoring updates.</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="mono" style="font-size:11px; color:var(--teal-vibrant);">✦ Stable Git Tag: release-v2.4.0-main</div>
-            </div>
-
-            <!-- 2. DEPLOYMENTS -->
-            <div class="ops-card">
-              <div>
-                <div class="ops-head">
-                  <span class="mono" style="font-weight:800; font-size:15px; color:#FFF;">🚀 Deployments</span>
-                  <span class="ops-badge badge-blue">Active / Healthy</span>
-                </div>
-                <ul class="ops-list">
-                  <li>
-                    <strong>GitHub Pages Edge Network</strong>
-                    <span>Static CDN deployment at kiran428-star.github.io/kiran-leadbox-agency</span>
-                  </li>
-                  <li>
-                    <strong>Google Cloud Exec Macro Endpoint</strong>
-                    <span>Live webhook listener executing asynchronous sheets synchronization.</span>
-                  </li>
-                  <li>
-                    <strong>SSL & Edge DNS Routing</strong>
-                    <span>Automated Let's Encrypt TLS handshake with 99.9% uptime.</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="mono" style="font-size:11px; color:#70A9FF;">✦ Last Synced: Today at Edge CDN</div>
-            </div>
-
-            <!-- 3. PACKAGES -->
-            <div class="ops-card">
-              <div>
-                <div class="ops-head">
-                  <span class="mono" style="font-weight:800; font-size:15px; color:#FFF;">📦 Packages</span>
-                  <span class="ops-badge badge-purple">Core Modules</span>
-                </div>
-                <ul class="ops-list">
-                  <li>
-                    <strong>@klb/crm-sync v1.8.0</strong>
-                    <span>Direct CRM lead pushing and local storage fallback mechanism.</span>
-                  </li>
-                  <li>
-                    <strong>@klb/ad-optimizer v2.1.4</strong>
-                    <span>Pixel trigger helper, CTR tracker, and Meta ad parameter parser.</span>
-                  </li>
-                  <li>
-                    <strong>@klb/calendar-widget v1.2.0</strong>
-                    <span>Interactive IST reservation matrix with automated regex validation.</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="mono" style="font-size:11px; color:#C084FC;">✦ Registry: Private Agency NPM Monorepo</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- PRICING & GROWTH PLANS -->
       <section class="section" id="pricing">
         <div class="container">
@@ -759,7 +628,7 @@
                   <li>1-week live trial campaign</li>
                 </ul>
               </div>
-              <a class="btn btn-primary" style="width:100%;" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20want%20the%20₹4999%20Complete%20Setup%20Trial%20Pack." target="_blank">Start Setup @ ₹4,999 →</a>
+              <a class="btn btn-primary" style="width:100%;" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20want%20the%20₹4999%20Complete%20Setup%20Trial%20Pack." target="_blank">Start ₹4,999 Setup →</a>
             </div>
 
             <div class="price-card">
@@ -980,7 +849,7 @@
         </div>
       </section>
 
-      <!-- DUAL CONVERSION HUB -->
+      <!-- DUAL CONVERSION HUB: DYNAMIC CALENDAR + FREE AUDIT -->
       <section class="section" id="audit" style="background:linear-gradient(180deg, var(--bg-black) 0%, #030A14 100%);">
         <div class="container">
           <div class="section-head">
@@ -990,7 +859,7 @@
           </div>
 
           <div class="booking-grid">
-            <!-- 1. CALENDAR BOOKING -->
+            <!-- 1. REAL-TIME CALENDAR BOOKING -->
             <div class="interactive-card" id="appointment">
               <div class="badge-live" style="margin-bottom:12px;">🗓️ Real-Time Calendar Slot</div>
               <h3>Schedule 1-on-1 Strategy Call</h3>
@@ -998,38 +867,21 @@
 
               <div class="cal-wrap">
                 <div class="cal-head">
-                  <span>SEPTEMBER 2026</span>
+                  <span id="calMonth">LIVE CALENDAR</span>
                   <span class="mono" style="color:var(--teal-vibrant); font-size:11px;">● SLOTS OPEN</span>
                 </div>
-                <div class="days-strip">
-                  <div class="day-btn active" onclick="pickDay(this, 'Wed, Sep 16')">
-                    <div class="d-name">Wed</div>
-                    <div class="d-num">16</div>
-                  </div>
-                  <div class="day-btn" onclick="pickDay(this, 'Thu, Sep 17')">
-                    <div class="d-name">Thu</div>
-                    <div class="d-num">17</div>
-                  </div>
-                  <div class="day-btn" onclick="pickDay(this, 'Fri, Sep 18')">
-                    <div class="d-name">Fri</div>
-                    <div class="d-num">18</div>
-                  </div>
-                  <div class="day-btn" onclick="pickDay(this, 'Sat, Sep 19')">
-                    <div class="d-name">Sat</div>
-                    <div class="d-num">19</div>
-                  </div>
-                  <div class="day-btn" onclick="pickDay(this, 'Mon, Sep 21')">
-                    <div class="d-name">Mon</div>
-                    <div class="d-num">21</div>
-                  </div>
-                </div>
+                <!-- Dynamic 5 Days loaded automatically -->
+                <div class="days-strip" id="dynamicDaysStrip"></div>
 
                 <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase;">Select Time Slot (IST)</div>
+                <!-- Exact 6 Required Time Slots in 3x2 Grid -->
                 <div class="slots-strip">
-                  <div class="slot-btn active" onclick="pickSlot(this, '11:00 AM')">11:00 AM</div>
-                  <div class="slot-btn" onclick="pickSlot(this, '02:30 PM')">02:30 PM</div>
+                  <div class="slot-btn active" onclick="pickSlot(this, '11:15 AM')">11:15 AM</div>
+                  <div class="slot-btn" onclick="pickSlot(this, '02:15 PM')">02:15 PM</div>
+                  <div class="slot-btn" onclick="pickSlot(this, '03:45 PM')">03:45 PM</div>
                   <div class="slot-btn" onclick="pickSlot(this, '05:30 PM')">05:30 PM</div>
-                  <div class="slot-btn" onclick="pickSlot(this, '07:00 PM')">07:00 PM</div>
+                  <div class="slot-btn" onclick="pickSlot(this, '06:45 PM')">06:45 PM</div>
+                  <div class="slot-btn" onclick="pickSlot(this, '07:45 PM')">07:45 PM</div>
                 </div>
               </div>
 
@@ -1089,6 +941,7 @@
       </section>
     </main>
 
+    <!-- FLOATING WHATSAPP -->
     <a class="whatsapp-fab" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20am%20exploring%20Kiran%20LeadBox%20and%20want%20to%20discuss%20qualified%20lead%20acquisition." target="_blank">
       <span style="font-size:20px;">💬</span>
       <span>Direct WhatsApp Chat</span>
@@ -1104,8 +957,48 @@
     <script>
       const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbw2Jdu6CjwzPG94dzzT7ScHSSjugYEPsv6SwWySkz9bIkLiK4HxbhL0HTgZ7BfIhTEv/exec";
 
-      let activeDate = "Wed, Sep 16";
-      let activeSlot = "11:00 AM";
+      let activeDate = "";
+      let activeSlot = "11:15 AM"; // Updated default slot
+
+      // Real-Time Calendar Engine (Including consecutive days)
+      function initRealtimeCalendar() {
+        const daysStrip = document.getElementById('dynamicDaysStrip');
+        const monthHeader = document.getElementById('calMonth');
+        if (!daysStrip) return;
+
+        daysStrip.innerHTML = '';
+        const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const monthNames = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'];
+
+        const now = new Date();
+        monthHeader.textContent = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+
+        // 5 consecutive days starting from today
+        for (let i = 0; i < 5; i++) {
+          const target = new Date();
+          target.setDate(now.getDate() + i);
+
+          const dName = dayNames[target.getDay()];
+          const dNum = target.getDate();
+          const formattedVal = `${dName}, ${monthNames[target.getMonth()].slice(0,3)} ${dNum}`;
+
+          const btn = document.createElement('div');
+          btn.className = `day-btn ${i === 0 ? 'active' : ''}`;
+          btn.onclick = function() { pickDay(this, formattedVal); };
+          btn.innerHTML = `
+            <div class="d-name">${dName}</div>
+            <div class="d-num">${dNum}</div>
+          `;
+
+          if (i === 0) {
+            activeDate = formattedVal;
+          }
+
+          daysStrip.appendChild(btn);
+        }
+      }
+
+      window.addEventListener('DOMContentLoaded', initRealtimeCalendar);
 
       function pickDay(el, d) {
         document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
