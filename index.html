@@ -248,6 +248,53 @@
       .section-title { font-size: clamp(30px, 3.8vw, 44px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.16; margin-bottom: 14px; }
       .section-desc { font-size: 16px; color: var(--text-sub); }
 
+      /* OPS PIPELINE: RELEASES, DEPLOYMENTS & PACKAGES */
+      .ops-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .ops-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-lg);
+        padding: 28px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+      }
+      .ops-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--teal-vibrant);
+        background: var(--bg-card-hover);
+        box-shadow: 0 16px 36px rgba(0, 71, 171, 0.35);
+      }
+      .ops-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .ops-badge {
+        font-size: 10px;
+        font-weight: 800;
+        padding: 3px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .badge-teal { background: rgba(2, 195, 154, 0.15); color: var(--teal-vibrant); }
+      .badge-blue { background: rgba(0, 71, 171, 0.25); color: #70A9FF; }
+      .badge-purple { background: rgba(168, 85, 247, 0.18); color: #C084FC; }
+
+      .ops-list { list-style: none; display: grid; gap: 12px; font-size: 13px; color: var(--text-sub); margin-bottom: 20px; }
+      .ops-list li { display: flex; flex-direction: column; gap: 2px; }
+      .ops-list strong { color: #FFF; font-size: 13px; }
+      .ops-list span { font-size: 11px; color: var(--text-muted); }
+
       /* PRICING SYSTEM */
       .pricing-grid {
         display: grid;
@@ -292,7 +339,7 @@
       .price-features li { display: flex; align-items: flex-start; gap: 6px; }
       .price-features li::before { content: "✓"; color: var(--teal-vibrant); font-weight: 900; }
 
-      /* COMPLETE 8 SERVICES GRID */
+      /* 8 SERVICES GRID */
       .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
       .service-card {
         background: var(--bg-card);
@@ -474,6 +521,7 @@
       @media (max-width: 1100px) {
         .pricing-grid { grid-template-columns: repeat(3, 1fr); }
         .services-grid { grid-template-columns: repeat(2, 1fr); }
+        .ops-grid { grid-template-columns: 1fr; }
       }
       @media (max-width: 860px) {
         .pricing-grid { grid-template-columns: 1fr 1fr; }
@@ -514,6 +562,7 @@
           <a href="#why-choose">Why Us</a>
           <a href="#pricing">Pricing</a>
           <a href="#services">8 Services</a>
+          <a href="#ops-ecosystem">Ecosystem</a>
           <a href="#appointment">Schedule Call</a>
           <a href="#audit">Free Audit</a>
         </div>
@@ -578,6 +627,94 @@
                 </div>
                 <span class="feed-tag">SCHEDULED</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELEASES, DEPLOYMENTS & PACKAGES (TECHNICAL ECOSYSTEM) -->
+      <section class="section" id="ops-ecosystem" style="background:var(--bg-surface); border-top:1px solid var(--border-glass); border-bottom:1px solid var(--border-glass);">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">System Operations</span>
+            <h2 class="section-title">Releases, Deployments & Packages</h2>
+            <p class="section-desc">Production release notes, cloud delivery points, and modular tech packages powering the Kiran LeadBox engine.</p>
+          </div>
+
+          <div class="ops-grid">
+            <!-- 1. RELEASES -->
+            <div class="ops-card">
+              <div>
+                <div class="ops-head">
+                  <span class="mono" style="font-weight:800; font-size:15px; color:#FFF;">🏷️ Releases</span>
+                  <span class="ops-badge badge-teal">v2.4 Production</span>
+                </div>
+                <ul class="ops-list">
+                  <li>
+                    <strong>v2.4.0 — WhatsApp Qualification Engine</strong>
+                    <span>Integrated pre-qualification questions & direct mobile routing.</span>
+                  </li>
+                  <li>
+                    <strong>v2.3.2 — Google Sheets Webhook Receiver</strong>
+                    <span>Real-time lead capture using zero-cost Google Apps Script engine.</span>
+                  </li>
+                  <li>
+                    <strong>v2.1.0 — Hyderabad Geo-Crawl Matrix</strong>
+                    <span>Hyper-local pin-code targeting & lead density scoring updates.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mono" style="font-size:11px; color:var(--teal-vibrant);">✦ Stable Git Tag: release-v2.4.0-main</div>
+            </div>
+
+            <!-- 2. DEPLOYMENTS -->
+            <div class="ops-card">
+              <div>
+                <div class="ops-head">
+                  <span class="mono" style="font-weight:800; font-size:15px; color:#FFF;">🚀 Deployments</span>
+                  <span class="ops-badge badge-blue">Active / Healthy</span>
+                </div>
+                <ul class="ops-list">
+                  <li>
+                    <strong>GitHub Pages Edge Network</strong>
+                    <span>Static CDN deployment at kiran428-star.github.io/kiran-leadbox-agency</span>
+                  </li>
+                  <li>
+                    <strong>Google Cloud Exec Macro Endpoint</strong>
+                    <span>Live webhook listener executing asynchronous sheets synchronization.</span>
+                  </li>
+                  <li>
+                    <strong>SSL & Edge DNS Routing</strong>
+                    <span>Automated Let's Encrypt TLS handshake with 99.9% uptime.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mono" style="font-size:11px; color:#70A9FF;">✦ Last Synced: Today at Edge CDN</div>
+            </div>
+
+            <!-- 3. PACKAGES -->
+            <div class="ops-card">
+              <div>
+                <div class="ops-head">
+                  <span class="mono" style="font-weight:800; font-size:15px; color:#FFF;">📦 Packages</span>
+                  <span class="ops-badge badge-purple">Core Modules</span>
+                </div>
+                <ul class="ops-list">
+                  <li>
+                    <strong>@klb/crm-sync v1.8.0</strong>
+                    <span>Direct CRM lead pushing and local storage fallback mechanism.</span>
+                  </li>
+                  <li>
+                    <strong>@klb/ad-optimizer v2.1.4</strong>
+                    <span>Pixel trigger helper, CTR tracker, and Meta ad parameter parser.</span>
+                  </li>
+                  <li>
+                    <strong>@klb/calendar-widget v1.2.0</strong>
+                    <span>Interactive IST reservation matrix with automated regex validation.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mono" style="font-size:11px; color:#C084FC;">✦ Registry: Private Agency NPM Monorepo</div>
             </div>
           </div>
         </div>
@@ -736,7 +873,6 @@
           </div>
 
           <div class="services-grid">
-            <!-- 1. Meta Ads -->
             <div class="service-card">
               <div>
                 <div class="service-icon-box">🎯</div>
@@ -750,7 +886,6 @@
               </ul>
             </div>
 
-            <!-- 2. Lead Generation System -->
             <div class="service-card">
               <div>
                 <div class="service-icon-box">⚡</div>
@@ -764,7 +899,6 @@
               </ul>
             </div>
 
-            <!-- 3. Creative & Ad Content -->
             <div class="service-card">
               <div>
                 <div class="service-icon-box">🎨</div>
@@ -778,7 +912,6 @@
               </ul>
             </div>
 
-            <!-- 4. Ad Optimization & CRO -->
             <div class="service-card">
               <div>
                 <div class="service-icon-box">📊</div>
@@ -792,7 +925,6 @@
               </ul>
             </div>
 
-            <!-- 5. Website & Funnel Audit -->
             <div class="service-card">
               <div>
                 <div class="service-icon-box">🔍</div>
@@ -806,7 +938,6 @@
               </ul>
             </div>
 
-            <!-- 6. Google Business Profile -->
             <div class="service-card">
               <div>
                 <div class="service-icon-box">📍</div>
@@ -820,7 +951,6 @@
               </ul>
             </div>
 
-            <!-- 7. High-Intent Google Ads -->
             <div class="service-card">
               <div>
                 <div class="service-icon-box">🔎</div>
@@ -834,7 +964,6 @@
               </ul>
             </div>
 
-            <!-- 8. Content & Video Branding -->
             <div class="service-card">
               <div>
                 <div class="service-icon-box">🎥</div>
@@ -960,7 +1089,6 @@
       </section>
     </main>
 
-    <!-- FLOATING WHATSAPP -->
     <a class="whatsapp-fab" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20am%20exploring%20Kiran%20LeadBox%20and%20want%20to%20discuss%20qualified%20lead%20acquisition." target="_blank">
       <span style="font-size:20px;">💬</span>
       <span>Direct WhatsApp Chat</span>
