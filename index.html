@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kiran LeadBox — Hyderabad's performance lead generation agency. Meta Ads, WhatsApp Lead Qualification, High-Converting Funnels & Revenue Growth." />
+    <title>Kiran LeadBox — More Leads. More Growth. | Hyderabad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --navy-dark: #00122E;
+        --royal-blue: #0047AB;
+        --electric-cyan: #00A896;
+        --teal-vibrant: #02C39A;
+        --teal-glow: rgba(2, 195, 154, 0.4);
+        --blue-glow: rgba(0, 71, 171, 0.45);
+        --bg-black: #02060D;
+        --bg-surface: #060F1E;
+        --bg-card: #0A172E;
+        --bg-card-hover: #0E203F;
+        --border-glass: rgba(2, 195, 154, 0.22);
+        --border-subtle: rgba(255, 255, 255, 0.08);
+        --text-white: #FFFFFF;
+        --text-sub: #9CB2D6;
+        --text-muted: #5F7599;
+        --whatsapp: #25D366;
+        --radius-xl: 22px;
+        --radius-lg: 16px;
+        --radius-md: 10px;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        background-color: var(--bg-black);
+        color: var(--text-white);
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      .container { width: min(1200px, calc(100% - 36px)); margin: 0 auto; }
+
+      .ambient-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        pointer-events: none;
+        z-index: 0;
+        animation: floatOrb 8s ease-in-out infinite alternate;
+      }
+      .orb-1 { width: 550px; height: 550px; background: radial-gradient(circle, rgba(0,71,171,0.35), transparent 70%); top: -120px; right: -100px; }
+      .orb-2 { width: 450px; height: 450px; background: radial-gradient(circle, rgba(2,195,154,0.22), transparent 70%); top: 40%; left: -140px; }
+      @keyframes floatOrb { 0% { transform: translateY(0) scale(1); } 100% { transform: translateY(40px) scale(1.08); } }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(2, 6, 13, 0.88);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border-glass);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+      }
+      .brand-logo-wrap {
+        width: 44px;
+        height: 44px;
+        background: white;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 4px 18px var(--teal-glow);
+        overflow: hidden;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text-sub);
+      }
+      .nav-links a:hover { color: var(--teal-vibrant); }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-weight: 800;
+        font-size: 13px;
+        cursor: pointer;
+        transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid transparent;
+      }
+      .btn:hover { transform: translateY(-3px); }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--teal-vibrant) 0%, var(--electric-cyan) 60%, var(--royal-blue) 100%);
+        color: #010814;
+        box-shadow: 0 10px 30px var(--teal-glow);
+      }
+      .btn-primary:hover { box-shadow: 0 16px 40px rgba(2, 195, 154, 0.55); filter: brightness(1.08); }
+      .btn-secondary {
+        background: rgba(10, 23, 46, 0.85);
+        color: var(--text-white);
+        border: 1px solid var(--border-glass);
+      }
+      .btn-secondary:hover { border-color: var(--teal-vibrant); background: var(--bg-card-hover); }
+
+      .badge-live {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 100px;
+        background: rgba(2, 195, 154, 0.1);
+        border: 1px solid var(--teal-vibrant);
+        color: var(--teal-vibrant);
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 22px;
+      }
+      .pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--teal-vibrant);
+        box-shadow: 0 0 0 4px var(--teal-glow);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse { 0% { transform: scale(0.95); opacity: 0.8; } 50% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(0.95); opacity: 0.8; } }
+
+      .hero {
+        position: relative;
+        padding: 90px 0 80px;
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: clamp(38px, 5.2vw, 64px);
+        line-height: 1.08;
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        margin-bottom: 22px;
+      }
+      .hero h1 span.gradient {
+        background: linear-gradient(135deg, #02C39A 0%, #00A896 40%, #5294E2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-desc {
+        font-size: 17px;
+        color: var(--text-sub);
+        line-height: 1.7;
+        margin-bottom: 34px;
+        max-width: 580px;
+      }
+      .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 34px; }
+      .trust-strip { display: flex; gap: 22px; font-size: 13px; font-weight: 700; color: var(--text-muted); }
+      .trust-strip span { display: flex; align-items: center; gap: 7px; color: var(--text-sub); }
+
+      .cockpit-box {
+        background: linear-gradient(145deg, rgba(10, 23, 46, 0.95), rgba(6, 15, 30, 0.9));
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-xl);
+        padding: 26px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6), 0 0 45px rgba(2, 195, 154, 0.1);
+      }
+      .cockpit-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--border-subtle);
+        margin-bottom: 18px;
+      }
+      .cockpit-metrics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .metric-cell {
+        background: var(--bg-surface);
+        padding: 14px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-subtle);
+      }
+      .metric-cell-label { font-size: 10px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; }
+      .metric-cell-val { font-size: 24px; font-weight: 900; color: var(--teal-vibrant); margin-top: 3px; }
+
+      .feed-list { display: grid; gap: 10px; }
+      .feed-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 14px;
+        background: rgba(2, 6, 13, 0.6);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-subtle);
+        font-size: 12px;
+      }
+      .feed-tag {
+        font-size: 10px;
+        font-weight: 800;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background: rgba(2, 195, 154, 0.15);
+        color: var(--teal-vibrant);
+      }
+
+      .section { padding: 90px 0; position: relative; }
+      .section-head { text-align: center; max-width: 740px; margin: 0 auto 50px; }
+      .section-tag {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--teal-vibrant);
+        margin-bottom: 12px;
+      }
+      .section-title { font-size: clamp(30px, 3.8vw, 44px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.16; margin-bottom: 14px; }
+      .section-desc { font-size: 16px; color: var(--text-sub); }
+
+      /* PRICING SYSTEM */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+      }
+      .price-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        padding: 24px 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+      }
+      .price-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--teal-vibrant);
+        box-shadow: 0 16px 36px rgba(0, 71, 171, 0.3);
+      }
+      .price-card.featured {
+        background: linear-gradient(180deg, #0d2247 0%, var(--bg-card) 100%);
+        border-color: var(--teal-vibrant);
+        box-shadow: 0 10px 30px rgba(2, 195, 154, 0.2);
+      }
+      .price-pill {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 4px;
+        background: rgba(2, 195, 154, 0.15);
+        color: var(--teal-vibrant);
+        margin-bottom: 12px;
+      }
+      .price-title { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+      .price-amount { font-size: 26px; font-weight: 900; color: #FFF; line-height: 1.1; margin-bottom: 6px; }
+      .price-duration { font-size: 12px; font-weight: 800; color: var(--teal-vibrant); margin-bottom: 14px; }
+      .price-features { list-style: none; display: grid; gap: 8px; font-size: 12px; color: var(--text-sub); border-top: 1px solid var(--border-subtle); padding-top: 14px; margin-bottom: 18px; }
+      .price-features li { display: flex; align-items: flex-start; gap: 6px; }
+      .price-features li::before { content: "✓"; color: var(--teal-vibrant); font-weight: 900; }
+
+      /* COMPLETE 8 SERVICES GRID */
+      .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+      .service-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        padding: 24px 20px;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--teal-vibrant);
+        background: var(--bg-card-hover);
+        box-shadow: 0 16px 36px rgba(0, 71, 171, 0.35);
+      }
+      .service-icon-box {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(2, 195, 154, 0.12);
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+        margin-bottom: 16px;
+        border: 1px solid var(--border-glass);
+      }
+      .service-card h4 { font-size: 17px; font-weight: 800; margin-bottom: 8px; }
+      .service-card p { font-size: 13px; color: var(--text-sub); line-height: 1.5; margin-bottom: 14px; }
+      .service-bullets { list-style: none; display: grid; gap: 6px; font-size: 12px; color: var(--text-white); border-top: 1px solid var(--border-subtle); padding-top: 12px; }
+      .service-bullets li { display: flex; align-items: center; gap: 6px; }
+      .service-bullets li::before { content: "✦"; color: var(--teal-vibrant); font-weight: 900; font-size: 9px; }
+
+      .comparison-table-wrap {
+        overflow-x: auto;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-glass);
+        background: var(--bg-card);
+      }
+      .comp-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 14px;
+      }
+      .comp-table th, .comp-table td {
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .comp-table th {
+        background: var(--bg-surface);
+        font-size: 12px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+      }
+      .comp-table tr.highlight {
+        background: rgba(2, 195, 154, 0.08);
+      }
+      .comp-table tr.highlight td {
+        color: var(--teal-vibrant);
+        font-weight: 800;
+      }
+
+      .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+      .interactive-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-xl);
+        padding: 36px 32px;
+      }
+      .interactive-card h3 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+      .interactive-card p.card-sub { font-size: 14px; color: var(--text-sub); margin-bottom: 22px; }
+
+      .cal-wrap {
+        background: var(--bg-black);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 18px;
+        margin-bottom: 20px;
+      }
+      .cal-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; margin-bottom: 14px; }
+      .days-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; margin-bottom: 18px; }
+      .day-btn {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+        padding: 8px 4px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .day-btn:hover, .day-btn.active {
+        background: var(--teal-vibrant);
+        color: #010814;
+        font-weight: 800;
+        border-color: var(--teal-vibrant);
+      }
+      .day-btn .d-name { font-size: 10px; text-transform: uppercase; margin-bottom: 2px; }
+      .day-btn .d-num { font-size: 15px; font-weight: 800; }
+
+      .slots-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .slot-btn {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid var(--border-subtle);
+        border-radius: 7px;
+        padding: 8px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .slot-btn:hover, .slot-btn.active {
+        background: var(--royal-blue);
+        color: white;
+        border-color: var(--teal-vibrant);
+      }
+
+      .input-wrap { margin-bottom: 16px; }
+      .input-wrap label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+      .input-wrap input, .input-wrap select {
+        width: 100%;
+        height: 46px;
+        background: var(--bg-black);
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+        padding: 0 14px;
+        color: white;
+        font-size: 14px;
+      }
+      .input-wrap input:focus, .input-wrap select:focus {
+        outline: none;
+        border-color: var(--teal-vibrant);
+        box-shadow: 0 0 10px var(--teal-glow);
+      }
+      .input-err { font-size: 11px; color: #FF6B6B; margin-top: 4px; display: none; }
+
+      .whatsapp-fab {
+        position: fixed;
+        bottom: 26px;
+        right: 26px;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 22px;
+        border-radius: 100px;
+        background: var(--whatsapp);
+        color: #FFFFFF;
+        font-weight: 800;
+        font-size: 14px;
+        box-shadow: 0 12px 35px rgba(37, 211, 102, 0.45);
+        transition: all 0.25s ease;
+      }
+      .whatsapp-fab:hover { transform: scale(1.06); }
+
+      .toast {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        z-index: 1000;
+        padding: 14px 20px;
+        background: var(--bg-card);
+        border: 1px solid var(--teal-vibrant);
+        border-radius: 10px;
+        color: white;
+        font-size: 13px;
+        font-weight: 700;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      .toast.show { transform: translateY(0); opacity: 1; }
+      .footer { border-top: 1px solid var(--border-glass); padding: 40px 0; font-size: 13px; color: var(--text-muted); text-align: center; }
+
+      @media (max-width: 1100px) {
+        .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+        .services-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 860px) {
+        .pricing-grid { grid-template-columns: 1fr 1fr; }
+        .hero-grid, .booking-grid { grid-template-columns: 1fr; }
+        .nav-links { display: none; }
+      }
+      @media (max-width: 580px) {
+        .pricing-grid, .services-grid { grid-template-columns: 1fr; }
+        .days-strip { grid-template-columns: repeat(3, 1fr); }
+        .slots-strip { grid-template-columns: repeat(2, 1fr); }
+        .interactive-card { padding: 22px 16px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div id="toast" class="toast">Data logged successfully!</div>
+
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="#">
+          <div class="brand-logo-wrap">
+            <svg viewBox="0 0 100 100" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 18H36V82H22V18Z" fill="#001B44"/>
+              <path d="M36 44L68 18H84L52 50L84 82H68L36 56V44Z" fill="#0047AB"/>
+              <rect x="34" y="74" width="7" height="12" rx="1" fill="#001B44"/>
+              <rect x="45" y="68" width="7" height="18" rx="1" fill="#002A66"/>
+              <rect x="56" y="62" width="7" height="24" rx="1" fill="#003D8F"/>
+              <rect x="67" y="52" width="7" height="34" rx="1" fill="#0047AB"/>
+              <path d="M12 76C28 74 48 66 65 48C74 38 78 30 78 30M78 30L65 33M78 30L76 43" stroke="#02C39A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>Kiran LeadBox</span>
+        </a>
+        <div class="nav-links">
+          <a href="#why-choose">Why Us</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#services">8 Services</a>
+          <a href="#appointment">Schedule Call</a>
+          <a href="#audit">Free Audit</a>
+        </div>
+        <a class="btn btn-primary" href="#appointment">Book Strategy Call →</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="badge-live">
+              <span class="pulse-dot"></span>
+              More Leads. More Growth.
+            </div>
+            <h1>
+              We Engineer <span class="gradient">High-ROI Paid Ads</span> & Qualified Customer Enquiries.
+            </h1>
+            <p class="hero-desc">
+              Not just vanity likes. We build customer acquisition funnels — Meta Ads, WhatsApp Lead Routing, High-Hook Creatives & CRM Integration for Hyderabad businesses ready to scale revenue.
+            </p>
+            <div class="hero-btns">
+              <a class="btn btn-primary" href="#appointment">Schedule Strategy Call →</a>
+              <a class="btn btn-secondary" href="#pricing">View Growth Plans</a>
+            </div>
+            <div class="trust-strip">
+              <span>✦ 100% Exclusive Verified Enquiries</span>
+              <span>✦ Zero Shared Leads Policy</span>
+            </div>
+          </div>
+
+          <div class="cockpit-box">
+            <div class="cockpit-header">
+              <span class="mono" style="font-size:11px; color:var(--teal-vibrant); display:flex; align-items:center; gap:6px;">
+                <span class="pulse-dot"></span> LIVE ACQUISITION ENGINE
+              </span>
+              <span class="mono" style="font-size:11px; color:var(--text-muted);">KLB // HYDERABAD</span>
+            </div>
+            <div class="cockpit-metrics">
+              <div class="metric-cell">
+                <div class="metric-cell-label">Qualified Leads Delivered</div>
+                <div class="metric-cell-val">1,940+</div>
+              </div>
+              <div class="metric-cell">
+                <div class="metric-cell-label">Avg. Qualified CPL</div>
+                <div class="metric-cell-val">₹125</div>
+              </div>
+            </div>
+            <div class="feed-list">
+              <div class="feed-item">
+                <div>
+                  <strong>Turnkey Villa Interior Lead</strong>
+                  <div style="color:var(--text-muted); font-size:10px;">Gachibowli · Budget: ₹25L+</div>
+                </div>
+                <span class="feed-tag">QUALIFIED</span>
+              </div>
+              <div class="feed-item">
+                <div>
+                  <strong>Pharma City Open Plots</strong>
+                  <div style="color:var(--text-muted); font-size:10px;">Mucherla · Sunday Site Visit</div>
+                </div>
+                <span class="feed-tag">SCHEDULED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING & GROWTH PLANS -->
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Predictable Investment</span>
+            <h2 class="section-title">Choose Your Strategic Growth Plan</h2>
+            <p class="section-desc">Transparent pilot tiers and scaling retainers. Meta ad budgets are paid directly to your ad account.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <div class="price-card">
+              <div>
+                <span class="price-pill">Optimization Pilot</span>
+                <div class="price-title">Trial Pack</div>
+                <div class="price-amount">₹2,499</div>
+                <div class="price-duration">⚡ 7 Days Sprint</div>
+                <ul class="price-features">
+                  <li>For existing accounts/pages</li>
+                  <li>Account audit & hook revamp</li>
+                  <li>1-week ad campaign delivery</li>
+                  <li>Direct WhatsApp lead routing</li>
+                </ul>
+              </div>
+              <a class="btn btn-secondary" style="width:100%;" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20want%20the%20₹2499%20Trial%20Optimization%20Pack." target="_blank">Claim ₹2,499 Trial →</a>
+            </div>
+
+            <div class="price-card featured">
+              <div>
+                <span class="price-pill" style="background:var(--teal-vibrant); color:#010814;">Full Setup Pilot</span>
+                <div class="price-title">Trial Pack + Setup</div>
+                <div class="price-amount">₹4,999</div>
+                <div class="price-duration">⚡ 7 Days Sprint</div>
+                <ul class="price-features">
+                  <li>Complete end-to-end setup</li>
+                  <li>New Profile & Business Manager</li>
+                  <li>Ad account & Pixel configuration</li>
+                  <li>1-week live trial campaign</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary" style="width:100%;" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20want%20the%20₹4999%20Complete%20Setup%20Trial%20Pack." target="_blank">Start Setup @ ₹4,999 →</a>
+            </div>
+
+            <div class="price-card">
+              <div>
+                <span class="price-pill">Starter Engine</span>
+                <div class="price-title">Starter Plan</div>
+                <div class="price-amount">₹7,499</div>
+                <div class="price-duration">⚡ 10 Days Sprint</div>
+                <ul class="price-features">
+                  <li><strong>20 – 50 Leads</strong> targeted</li>
+                  <li>Standard account setup</li>
+                  <li>Creative hook angles testing</li>
+                  <li>Lead qualification survey</li>
+                </ul>
+              </div>
+              <a class="btn btn-secondary" style="width:100%;" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20want%20to%20enroll%20in%20the%20₹7499%20Starter%20Plan." target="_blank">Choose Starter →</a>
+            </div>
+
+            <div class="price-card">
+              <div>
+                <span class="price-pill">Expansion Scale</span>
+                <div class="price-title">Growth Plan</div>
+                <div class="price-amount">₹13,499</div>
+                <div class="price-duration">⚡ 15 Days Sprint</div>
+                <ul class="price-features">
+                  <li><strong>60 – 100 Leads</strong> targeted</li>
+                  <li>Funnel optimization & CRO</li>
+                  <li>Dynamic Telugu & English creatives</li>
+                  <li>Automated CRM synchronization</li>
+                </ul>
+              </div>
+              <a class="btn btn-secondary" style="width:100%;" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20want%20the%20₹13499%20Growth%20Plan." target="_blank">Choose Growth →</a>
+            </div>
+
+            <div class="price-card">
+              <div>
+                <span class="price-pill" style="background:rgba(82,148,226,0.2); color:#70A9FF;">Enterprise Retainer</span>
+                <div class="price-title">Premium Plan</div>
+                <div class="price-amount">₹19,999</div>
+                <div class="price-duration">⚡ 30 Days Full Cycle</div>
+                <ul class="price-features">
+                  <li><strong>130 – 200+ Leads</strong> targeted</li>
+                  <li>Dedicated full-funnel management</li>
+                  <li>Weekly transparency audit calls</li>
+                  <li>Priority direct founder support</li>
+                </ul>
+              </div>
+              <a class="btn btn-secondary" style="width:100%;" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20am%20interested%20in%20the%20₹19999%20Premium%20Retainer." target="_blank">Choose Premium →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE KIRAN LEADBOX -->
+      <section class="section" id="why-choose" style="background:var(--bg-surface); border-top:1px solid var(--border-glass); border-bottom:1px solid var(--border-glass);">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Market Comparison</span>
+            <h2 class="section-title">Why Traditional Portals Fail Your Business</h2>
+            <p class="section-desc">Stop paying high upfront fees for shared leads that 5 other competitors are calling at the exact same time.</p>
+          </div>
+
+          <div class="comparison-table-wrap">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th>Platform / Method</th>
+                  <th>Avg. Cost</th>
+                  <th>Contract Lock-in</th>
+                  <th>Lead Quality & Ownership</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Justdial</strong></td>
+                  <td>₹25,000+</td>
+                  <td>180 Days Lock-in</td>
+                  <td>Shared with 5+ competitors (Low Intent)</td>
+                </tr>
+                <tr>
+                  <td><strong>99acres / Housing</strong></td>
+                  <td>₹30,000+</td>
+                  <td>60 - 90 Days</td>
+                  <td>High Portal Competition (Junk Clicks)</td>
+                </tr>
+                <tr>
+                  <td><strong>Sulekha</strong></td>
+                  <td>₹10,000+</td>
+                  <td>30 Days</td>
+                  <td>Random / Unqualified Enquiries</td>
+                </tr>
+                <tr class="highlight">
+                  <td><strong>Kiran LeadBox System</strong></td>
+                  <td>Starting ₹2,499</td>
+                  <td>Zero Lock-in (Sprint Based)</td>
+                  <td>100% Exclusive Inbound WhatsApp Leads</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 COMPLETE CORE SERVICES -->
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">End-to-End Capabilities</span>
+            <h2 class="section-title">The Complete 8-Part Service Ecosystem</h2>
+            <p class="section-desc">We build and run digital lead-generation campaigns that connect businesses directly with potential paying customers.</p>
+          </div>
+
+          <div class="services-grid">
+            <!-- 1. Meta Ads -->
+            <div class="service-card">
+              <div>
+                <div class="service-icon-box">🎯</div>
+                <h4>1. Meta Ads Engine</h4>
+                <p>Facebook & Instagram Ads focused purely on revenue outcomes. Audience targeting, budget optimization & scaling.</p>
+              </div>
+              <ul class="service-bullets">
+                <li>WhatsApp lead & message campaigns</li>
+                <li>Hyper-local Hyderabad pin-code targeting</li>
+                <li>Continuous CPL & conversion monitoring</li>
+              </ul>
+            </div>
+
+            <!-- 2. Lead Generation System -->
+            <div class="service-card">
+              <div>
+                <div class="service-icon-box">⚡</div>
+                <h4>2. Full Lead Flow System</h4>
+                <p>Ad → WhatsApp → Lead Qualification → Instant Lead Delivery. An unbroken flow ensuring zero lead drop-off.</p>
+              </div>
+              <ul class="service-bullets">
+                <li>Instant alerts directly to owner phone</li>
+                <li>Pre-qualification budget filters</li>
+                <li>Privyr & CRM automated synchronization</li>
+              </ul>
+            </div>
+
+            <!-- 3. Creative & Ad Content -->
+            <div class="service-card">
+              <div>
+                <div class="service-icon-box">🎨</div>
+                <h4>3. High-Hook Creatives</h4>
+                <p>Pretty designs don't sell; high-hook creatives do. High-impact posters, AI carousels, and offer positioning.</p>
+              </div>
+              <ul class="service-bullets">
+                <li>Scroll-stopping Telugu & English hooks</li>
+                <li>Dynamic creative variations testing</li>
+                <li>High-CTR benefit-driven copywriting</li>
+              </ul>
+            </div>
+
+            <!-- 4. Ad Optimization & CRO -->
+            <div class="service-card">
+              <div>
+                <div class="service-icon-box">📊</div>
+                <h4>4. Ad Optimization & CRO</h4>
+                <p>Continuous tracking of CTR, CPC, CPM, and Lead Quality. Identifying winning angles and ruthlessly cutting ad waste.</p>
+              </div>
+              <ul class="service-bullets">
+                <li>Audience segment performance audit</li>
+                <li>Placement & budget re-allocation</li>
+                <li>Weekly transparency metrics reports</li>
+              </ul>
+            </div>
+
+            <!-- 5. Website & Funnel Audit -->
+            <div class="service-card">
+              <div>
+                <div class="service-icon-box">🔍</div>
+                <h4>5. Funnel & Landing Page Audit</h4>
+                <p>Diagnosing mobile UX, WhatsApp CTA accessibility, trust factors, and friction points that stop traffic from converting.</p>
+              </div>
+              <ul class="service-bullets">
+                <li>3-point actionable diagnostic teardown</li>
+                <li>Mobile viewport speed & layout checks</li>
+                <li>Friction removal & CTA optimization</li>
+              </ul>
+            </div>
+
+            <!-- 6. Google Business Profile -->
+            <div class="service-card">
+              <div>
+                <div class="service-icon-box">📍</div>
+                <h4>6. Google 3-Pack Dominance</h4>
+                <p>Turn Google Maps into a predictable inbound customer channel. Category hierarchy, citation indexing, and geo-reviews.</p>
+              </div>
+              <ul class="service-bullets">
+                <li>Local SEO & geographic keyword rankings</li>
+                <li>Direct phone call & direction requests</li>
+                <li>Review acquisition & local authority</li>
+              </ul>
+            </div>
+
+            <!-- 7. High-Intent Google Ads -->
+            <div class="service-card">
+              <div>
+                <div class="service-icon-box">🔎</div>
+                <h4>7. High-Intent Google Ads</h4>
+                <p>Supplementary search campaigns capturing customers searching specifically for high-ticket commercial services.</p>
+              </div>
+              <ul class="service-bullets">
+                <li>Commercial high-intent keyword bidding</li>
+                <li>Negative keyword filters to avoid ad waste</li>
+                <li>Direct phone call ads & quote requests</li>
+              </ul>
+            </div>
+
+            <!-- 8. Content & Video Branding -->
+            <div class="service-card">
+              <div>
+                <div class="service-icon-box">🎥</div>
+                <h4>8. Content & Video Branding</h4>
+                <p>On-ground reel concept development, founder face-branding, content calendars, and scripts tailored for Hyderabad local authority.</p>
+              </div>
+              <ul class="service-bullets">
+                <li>Founder personal branding scripts</li>
+                <li>High-retention reel storyboarding</li>
+                <li>Local business walk-through directions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DUAL CONVERSION HUB -->
+      <section class="section" id="audit" style="background:linear-gradient(180deg, var(--bg-black) 0%, #030A14 100%);">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Direct Action Hub</span>
+            <h2 class="section-title">Book a Growth Call or Claim Free Audit</h2>
+            <p class="section-desc">Select a live consultation slot or submit your business for a free 15-minute diagnostic teardown.</p>
+          </div>
+
+          <div class="booking-grid">
+            <!-- 1. CALENDAR BOOKING -->
+            <div class="interactive-card" id="appointment">
+              <div class="badge-live" style="margin-bottom:12px;">🗓️ Real-Time Calendar Slot</div>
+              <h3>Schedule 1-on-1 Strategy Call</h3>
+              <p class="card-sub">Select date & time. Enter your 10-digit number to sync your meeting slot.</p>
+
+              <div class="cal-wrap">
+                <div class="cal-head">
+                  <span>SEPTEMBER 2026</span>
+                  <span class="mono" style="color:var(--teal-vibrant); font-size:11px;">● SLOTS OPEN</span>
+                </div>
+                <div class="days-strip">
+                  <div class="day-btn active" onclick="pickDay(this, 'Wed, Sep 16')">
+                    <div class="d-name">Wed</div>
+                    <div class="d-num">16</div>
+                  </div>
+                  <div class="day-btn" onclick="pickDay(this, 'Thu, Sep 17')">
+                    <div class="d-name">Thu</div>
+                    <div class="d-num">17</div>
+                  </div>
+                  <div class="day-btn" onclick="pickDay(this, 'Fri, Sep 18')">
+                    <div class="d-name">Fri</div>
+                    <div class="d-num">18</div>
+                  </div>
+                  <div class="day-btn" onclick="pickDay(this, 'Sat, Sep 19')">
+                    <div class="d-name">Sat</div>
+                    <div class="d-num">19</div>
+                  </div>
+                  <div class="day-btn" onclick="pickDay(this, 'Mon, Sep 21')">
+                    <div class="d-name">Mon</div>
+                    <div class="d-num">21</div>
+                  </div>
+                </div>
+
+                <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase;">Select Time Slot (IST)</div>
+                <div class="slots-strip">
+                  <div class="slot-btn active" onclick="pickSlot(this, '11:00 AM')">11:00 AM</div>
+                  <div class="slot-btn" onclick="pickSlot(this, '02:30 PM')">02:30 PM</div>
+                  <div class="slot-btn" onclick="pickSlot(this, '05:30 PM')">05:30 PM</div>
+                  <div class="slot-btn" onclick="pickSlot(this, '07:00 PM')">07:00 PM</div>
+                </div>
+              </div>
+
+              <form onsubmit="handleAppointmentSubmit(event)">
+                <div class="input-wrap">
+                  <label>Full Name</label>
+                  <input type="text" id="book_name" required placeholder="e.g. Rahul Sharma" />
+                </div>
+                <div class="input-wrap">
+                  <label>10-Digit Mobile / WhatsApp Number</label>
+                  <input type="tel" id="book_phone" required placeholder="9876543210" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                  <div id="book_phone_err" class="input-err">Please enter a valid 10-digit Indian mobile number.</div>
+                </div>
+                <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px;">
+                  Confirm & Sync Calendar Slot →
+                </button>
+              </form>
+            </div>
+
+            <!-- 2. FREE FUNNEL AUDIT -->
+            <div class="interactive-card">
+              <div class="badge-live" style="background:rgba(0,71,171,0.25); border-color:#5294E2; color:#70A9FF; margin-bottom:12px;">
+                🔍 15-Minute Funnel Teardown
+              </div>
+              <h3>Claim Free Funnel Audit</h3>
+              <p class="card-sub">We’ll analyze your Meta ads, landing page, and WhatsApp response speed and give you a 3-point video teardown.</p>
+
+              <form onsubmit="handleAuditSubmit(event)">
+                <div class="input-wrap">
+                  <label>Full Name</label>
+                  <input type="text" id="audit_name" required placeholder="e.g. Kiran Kumar" />
+                </div>
+                <div class="input-wrap">
+                  <label>10-Digit WhatsApp Number</label>
+                  <input type="tel" id="audit_phone" required placeholder="9876543210" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                  <div id="audit_phone_err" class="input-err">Please enter a valid 10-digit mobile number.</div>
+                </div>
+                <div class="input-wrap">
+                  <label>Business Name & Website / Instagram Link</label>
+                  <input type="text" id="audit_biz" required placeholder="e.g. Sri Durga Interiors / @durgainteriors" />
+                </div>
+                <div class="input-wrap">
+                  <label>Current Monthly Ad Budget</label>
+                  <select id="audit_budget">
+                    <option value="Under ₹25,000">Under ₹25,000</option>
+                    <option value="₹25,000 to ₹1 Lakh">₹25,000 to ₹1,00,000</option>
+                    <option value="₹1 Lakh+">₹1,00,000+</option>
+                  </select>
+                </div>
+                <button class="btn btn-secondary" type="submit" style="width:100%; border-color:var(--teal-vibrant); color:var(--teal-vibrant); font-weight:800; margin-top:6px;">
+                  Get Free Audit Report →
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FLOATING WHATSAPP -->
+    <a class="whatsapp-fab" href="https://wa.me/919177244345?text=Hi%20Kiran,%20I%20am%20exploring%20Kiran%20LeadBox%20and%20want%20to%20discuss%20qualified%20lead%20acquisition." target="_blank">
+      <span style="font-size:20px;">💬</span>
+      <span>Direct WhatsApp Chat</span>
+    </a>
+
+    <footer class="footer">
+      <div class="container">
+        <div style="font-weight:800; color:white; margin-bottom:6px; font-size:15px;">Kiran LeadBox — Performance Lead Generation Agency</div>
+        <p>© 2026 Kiran LeadBox. All rights reserved. Hyderabad, Telangana.</p>
+      </div>
+    </footer>
+
+    <script>
+      const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbw2Jdu6CjwzPG94dzzT7ScHSSjugYEPsv6SwWySkz9bIkLiK4HxbhL0HTgZ7BfIhTEv/exec";
+
+      let activeDate = "Wed, Sep 16";
+      let activeSlot = "11:00 AM";
+
+      function pickDay(el, d) {
+        document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+        activeDate = d;
+      }
+
+      function pickSlot(el, s) {
+        document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+        activeSlot = s;
+      }
+
+      function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 4000);
+      }
+
+      function logToGoogleSheets(payload) {
+        const stored = JSON.parse(localStorage.getItem('klb_leads') || '[]');
+        stored.push({ ...payload, timestamp: new Date().toISOString() });
+        localStorage.setItem('klb_leads', JSON.stringify(stored));
+
+        if (GOOGLE_SHEET_WEBHOOK_URL) {
+          fetch(GOOGLE_SHEET_WEBHOOK_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          }).catch(err => console.error("Sheet Sync Failed:", err));
+        }
+      }
+
+      function handleAppointmentSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('book_name').value.trim();
+        const phone = document.getElementById('book_phone').value.trim();
+        const err = document.getElementById('book_phone_err');
+
+        const phoneRegex = /^[6-9]\d{9}$/;
+        if (!phoneRegex.test(phone)) {
+          err.style.display = 'block';
+          return;
+        }
+        err.style.display = 'none';
+
+        logToGoogleSheets({ type: 'Appointment', name, phone, date: activeDate, slot: activeSlot });
+        showToast("Slot reserved & logged to Sheet! Opening WhatsApp...");
+
+        const msg = `Hi Kiran, I am booking my 1-on-1 Growth Strategy Call!%0A%0A🗓 Date: ${encodeURIComponent(activeDate)}%0A⏰ Slot: ${encodeURIComponent(activeSlot)}%0A👤 Name: ${encodeURIComponent(name)}%0A📞 Phone: ${encodeURIComponent(phone)}%0A%0APlease confirm my slot.`;
+        setTimeout(() => {
+          window.open(`https://wa.me/919177244345?text=${msg}`, '_blank');
+        }, 600);
+      }
+
+      function handleAuditSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('audit_name').value.trim();
+        const phone = document.getElementById('audit_phone').value.trim();
+        const biz = document.getElementById('audit_biz').value.trim();
+        const budget = document.getElementById('audit_budget').value;
+        const err = document.getElementById('audit_phone_err');
+
+        const phoneRegex = /^[6-9]\d{9}$/;
+        if (!phoneRegex.test(phone)) {
+          err.style.display = 'block';
+          return;
+        }
+        err.style.display = 'none';
+
+        logToGoogleSheets({ type: 'Free Audit', name, phone, business: biz, budget });
+        showToast("Audit request logged to Sheet! Connecting on WhatsApp...");
+
+        const msg = `Hi Kiran, I want to claim the Free Funnel & Ad Teardown!%0A%0A👤 Name: ${encodeURIComponent(name)}%0A📞 WhatsApp: ${encodeURIComponent(phone)}%0A🏢 Business: ${encodeURIComponent(biz)}%0A💰 Monthly Ad Budget: ${encodeURIComponent(budget)}%0A%0APlease share the audit details.`;
+        setTimeout(() => {
+          window.open(`https://wa.me/919177244345?text=${msg}`, '_blank');
+        }, 600);
+      }
+    </script>
+  </body>
+</html>
